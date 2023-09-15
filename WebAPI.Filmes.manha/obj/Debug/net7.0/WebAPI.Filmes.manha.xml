@@ -98,7 +98,7 @@
             <param name="genero">Genero a ser atualizado</param>
             <returns>Retorna status ok</returns>
         </member>
-        <member name="M:WebAPI.Filmes.manha.Contollers.UsuarioController.Login(System.String,System.String)">
+        <member name="M:WebAPI.Filmes.manha.Contollers.UsuarioController.Login(WebAPI.Filmes.manha.Domains.UsuarioDomain)">
             <summary>
             Endpoint que Compara a senha e email digitada pelo usuario com as mesmas que estao no banco de dados.
             </summary>

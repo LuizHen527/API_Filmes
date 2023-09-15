@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebAPI.Filmes.manha.Domains;
 using WebAPI.Filmes.manha.Interfaces;
@@ -38,6 +39,7 @@ namespace WebAPI.Filmes.manha.Contollers
         /// <returns></returns>
 
         [HttpGet]
+        [Authorize(Roles = "True, False")]
         public IActionResult Get()
         {
             try
@@ -62,7 +64,7 @@ namespace WebAPI.Filmes.manha.Contollers
         /// <returns>Status code 201(Created)</returns>
 
         [HttpPost]
-
+        [Authorize (Roles = "true")]
         public IActionResult Post(GeneroDomain novoGenero)
         {
 
